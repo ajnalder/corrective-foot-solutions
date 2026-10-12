@@ -4,7 +4,7 @@ Open `index.html` in a browser. Everything is self-contained (HTML + CSS, Google
 
 ## Direction
 - **Keep the logo**, pull the palette from it: cyan `#12b4e5` (primary action), plum `#8a1f5a` and olive `#9aa33b` (secondary accents), charcoal ink `#17202b`.
-- Move away from the old flat cyan blocks and circle photos to a **warm, editorial, premium-health** feel: sand/paper neutrals, large Fraunces serif headlines with italic cyan emphasis, Plus Jakarta Sans body, square corners throughout (no pills, no rounded cards), flat tiles with full-bleed images.
+- Move away from the old flat cyan blocks and circle photos to a **warm, editorial, premium-health** feel: sand/paper neutrals, large Fraunces serif headlines with italic cyan emphasis, Plus Jakarta Sans body, 4px corners throughout (no pills, no big rounded cards), flat tiles with full-bleed images.
 - Content strategy on the page: hero promise → trust strip → what FMT is → orthotics vs FMT comparison → conditions grid → 3-step process → whole-family lifestyle band → client stories → sports podiatry → booking CTA with clinic details → footer.
 
 ## Imagery (iStock comps, watermarked — license before launch)
