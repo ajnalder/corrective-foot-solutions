@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corrective Foot Solutions — Tauranga Podiatrists | Fix the cause of foot pain, without orthotics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cyan:#12b4e5; --cyan-deep:#0a8fbd; --cyan-tint:#e6f6fc;
+    --plum:#8a1f5a; --plum-tint:#f6e9f0;
+    --olive:#9aa33b; --olive-tint:#f0f3dc;
+    --ink:#17202b; --ink-2:#44505c; --ink-3:#7a8690;
+    --sand:#f7f2ea; --sand-2:#efe6d8; --paper:#fffdf9; --line:#e6ded1;
+    --radius:22px;
+    --max:1200px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:-.015em;line-height:1.08;margin:0}
+  h1{font-size:clamp(2.6rem,5.2vw,4.4rem);font-variation-settings:"opsz" 144}
+  h2{font-size:clamp(2rem,3.6vw,3rem);font-variation-settings:"opsz" 144}
+  h3{font-size:1.35rem}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-deep)}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--cyan);border-radius:2px}
+  .eyebrow.plum{color:var(--plum)} .eyebrow.plum::before{background:var(--plum)}
+  .eyebrow.olive{color:#6f7a1d} .eyebrow.olive::before{background:var(--olive)}
+  .lead{font-size:1.15rem;color:var(--ink-2)}
+  .em{font-style:italic;font-weight:400;color:var(--cyan-deep)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:.95rem;border:1.5px solid transparent;transition:.2s;white-space:nowrap}
+  .btn.primary{background:var(--cyan);color:#fff;box-shadow:0 10px 24px -10px rgba(18,180,229,.7)}
+  .btn.primary:hover{background:var(--cyan-deep)}
+  .btn.ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+  .btn.ghost:hover{background:var(--ink);color:#fff}
+  .btn.light{border-color:rgba(255,255,255,.5);color:#fff}
+  .btn.light:hover{background:#fff;color:var(--ink)}
+  .btn svg{width:18px;height:18px}
+  section{padding:104px 0}
+
+  /* top bar */
+  .topbar{background:var(--ink);color:#cfd7df;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px}
+  .topbar span b{color:#fff;font-weight:600}
+  .topbar .dot{width:7px;height:7px;background:var(--olive);border-radius:50%;display:inline-block;margin-right:8px;vertical-align:middle}
+
+  /* nav */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+  .logo img{height:58px}
+  nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-weight:500;font-size:.93rem}
+  nav a{color:var(--ink-2);position:relative}
+  nav a:hover{color:var(--ink)}
+  nav a::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--cyan);transform:scaleX(0);transition:.2s;transform-origin:left}
+  nav a:hover::after{transform:scaleX(1)}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .nav-cta .phone{font-weight:600;color:var(--ink);margin-right:8px}
+
+  /* hero */
+  .hero{padding:0;background:var(--sand);position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;min-height:680px;padding-top:72px;padding-bottom:72px}
+  .hero-copy{display:flex;flex-direction:column;gap:26px;max-width:580px}
+  .hero-copy .eyebrow{margin-bottom:-6px}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .hero-note{display:flex;align-items:center;gap:14px;font-size:.9rem;color:var(--ink-2)}
+  .hero-note .avatars{display:flex}
+  .hero-note .avatars span{width:34px;height:34px;border-radius:50%;border:2.5px solid var(--sand);margin-left:-10px;background:linear-gradient(135deg,var(--cyan),var(--plum))}
+  .hero-note .avatars span:first-child{margin-left:0}
+  .hero-note .avatars span:nth-child(2){background:linear-gradient(135deg,var(--olive),var(--cyan))}
+  .hero-note .avatars span:nth-child(3){background:linear-gradient(135deg,var(--plum),var(--olive))}
+  .stars{color:#f0b429;letter-spacing:1px}
+  .hero-art{position:relative;height:600px}
+  .hero-art .main{position:absolute;inset:0;border-radius:36px 36px 36px 120px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(23,32,43,.45)}
+  .hero-art .main img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+  .hero-art .card{position:absolute;left:-52px;bottom:54px;background:#fff;border-radius:20px;padding:18px 22px;display:flex;gap:16px;align-items:center;box-shadow:0 24px 50px -24px rgba(23,32,43,.4);max-width:330px}
+  .hero-art .card .ic{width:48px;height:48px;border-radius:14px;background:var(--cyan-tint);display:grid;place-items:center;color:var(--cyan-deep);flex:none}
+  .hero-art .card b{display:block;font-size:.95rem}
+  .hero-art .card small{color:var(--ink-3);font-size:.82rem;line-height:1.4;display:block}
+  .hero-art .blob{position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:var(--olive-tint);z-index:-1}
+  .hero-art .ring{position:absolute;right:-30px;bottom:-30px;width:180px;height:180px;border-radius:50%;border:16px solid var(--plum-tint);z-index:-1}
+
+  /* trust strip */
+  .trust{background:var(--paper);border-bottom:1px solid var(--line);padding:0}
+  .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+  .trust .item{padding:30px 24px;display:flex;gap:16px;align-items:center;border-left:1px solid var(--line)}
+  .trust .item:first-child{border-left:0;padding-left:0}
+  .trust .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex:none}
+  .trust b{display:block;font-size:.98rem}
+  .trust small{color:var(--ink-3);font-size:.82rem}
+  .ic.c{background:var(--cyan-tint);color:var(--cyan-deep)}
+  .ic.p{background:var(--plum-tint);color:var(--plum)}
+  .ic.o{background:var(--olive-tint);color:#6f7a1d}
+
+  /* approach */
+  .approach .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .approach .art{position:relative}
+  .approach .art img{border-radius:var(--radius);aspect-ratio:4/4.4;object-fit:cover;width:100%}
+  .approach .art .tag{position:absolute;right:-24px;top:40px;background:var(--plum);color:#fff;padding:14px 18px;border-radius:16px;font-family:"Fraunces",serif;font-style:italic;font-size:1.05rem;box-shadow:0 18px 40px -20px rgba(138,31,90,.6);transform:rotate(3deg)}
+  .approach .art .stat{position:absolute;left:-28px;bottom:36px;background:#fff;border-radius:18px;padding:18px 22px;box-shadow:0 24px 50px -24px rgba(23,32,43,.35)}
+  .approach .art .stat .big{font-family:"Fraunces",serif;font-size:2.4rem;line-height:1;color:var(--cyan-deep)}
+  .approach .art .stat small{color:var(--ink-3)}
+  .approach .copy{display:flex;flex-direction:column;gap:22px}
+  .checks{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:14px}
+  .checks li{display:flex;gap:14px;align-items:flex-start;color:var(--ink-2)}
+  .checks li b{color:var(--ink)}
+  .checks .tick{width:26px;height:26px;border-radius:50%;background:var(--cyan-tint);color:var(--cyan-deep);display:grid;place-items:center;flex:none;margin-top:2px}
+  .checks .tick svg{width:14px;height:14px}
+
+  /* compare */
+  .compare{background:var(--sand);padding:96px 0}
+  .compare .head{max-width:640px;margin:0 auto 52px;text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center}
+  .compare .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .cmp{border-radius:var(--radius);padding:36px;background:#fff;border:1px solid var(--line)}
+  .cmp.fmt{background:var(--ink);color:#fff;border-color:var(--ink);position:relative;overflow:hidden}
+  .cmp.fmt::after{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(18,180,229,.45),transparent 70%)}
+  .cmp h3{font-size:1.5rem;margin-bottom:6px}
+  .cmp .sub{font-size:.9rem;color:var(--ink-3);margin-bottom:22px}
+  .cmp.fmt .sub{color:#9fb0bf}
+  .cmp ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:.98rem}
+  .cmp li{display:flex;gap:12px;align-items:flex-start}
+  .cmp li span.x{color:#c43d3d;font-weight:700;flex:none;width:20px}
+  .cmp li span.y{color:var(--cyan);font-weight:700;flex:none;width:20px}
+  .cmp.fmt li{color:#e6edf3}
+
+  /* conditions */
+  .conditions .head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;margin-bottom:48px}
+  .conditions .head div{display:flex;flex-direction:column;gap:14px;max-width:620px}
+  .cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .cond{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;transition:.25s;position:relative;display:flex;flex-direction:column;gap:12px}
+  .cond:hover{transform:translateY(-4px);box-shadow:0 30px 50px -30px rgba(23,32,43,.3);border-color:transparent}
+  .cond .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:6px}
+  .cond p{color:var(--ink-2);font-size:.95rem}
+  .cond a.more{font-weight:600;color:var(--cyan-deep);font-size:.9rem;margin-top:auto;display:inline-flex;gap:6px;align-items:center}
+
+  /* steps */
+  .steps{background:var(--ink);color:#fff;padding:104px 0;position:relative;overflow:hidden}
+  .steps::before{content:"";position:absolute;left:-200px;bottom:-300px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(154,163,59,.35),transparent 70%)}
+  .steps .head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+  .steps .head p{color:#b5c1cc}
+  .steps .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+  .step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:34px 30px;display:flex;flex-direction:column;gap:14px;backdrop-filter:blur(4px)}
+  .step .n{font-family:"Fraunces",serif;font-style:italic;font-size:3.2rem;line-height:1;color:var(--cyan)}
+  .step h3{color:#fff}
+  .step p{color:#b5c1cc;font-size:.95rem}
+  .steps .eyebrow{color:var(--cyan)} .steps .eyebrow::before{background:var(--cyan)}
+
+  /* family / lifestyle */
+  .life{padding:0}
+  .life .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;padding:0;max-width:none}
+  .life .img{min-height:620px;position:relative}
+  .life .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .life .copy{background:var(--olive-tint);padding:96px 80px;display:flex;flex-direction:column;justify-content:center;gap:22px}
+  .life .copy h2{max-width:520px}
+  .life .copy .lead{max-width:520px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .pill{padding:9px 16px;border-radius:999px;background:#fff;font-size:.88rem;font-weight:600;color:var(--ink-2);border:1px solid rgba(0,0,0,.05)}
+
+  /* testimonials */
+  .quotes .head{text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;margin-bottom:52px}
+  .quotes .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .quote{background:var(--sand);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column;gap:18px}
+  .quote .mark{font-family:"Fraunces",serif;font-size:4rem;line-height:.6;color:var(--cyan);height:28px}
+  .quote p{font-family:"Fraunces",serif;font-size:1.18rem;line-height:1.45;font-weight:400}
+  .quote .who{display:flex;align-items:center;gap:12px;margin-top:auto;font-size:.9rem}
+  .quote .who span.av{width:40px;height:40px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+  .quote .who small{display:block;color:var(--ink-3)}
+  .google{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;font-weight:600}
+
+  /* sports */
+  .sports{background:var(--sand);padding:0;overflow:hidden}
+  .sports .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding-top:104px;padding-bottom:104px}
+  .sports .copy{display:flex;flex-direction:column;gap:22px}
+  .sports .art{position:relative}
+  .sports .art img{border-radius:var(--radius);aspect-ratio:5/4;object-fit:cover;width:100%}
+  .sports .art .badge{position:absolute;left:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:var(--olive);color:#fff;display:grid;place-items:center;text-align:center;font-family:"Fraunces",serif;font-style:italic;font-size:1rem;line-height:1.2;padding:18px;transform:rotate(-8deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+
+  /* cta band */
+  .cta{padding:0}
+  .cta .wrap{padding-top:104px;padding-bottom:104px}
+  .cta .panel{background:linear-gradient(120deg,var(--cyan) 0%,#0e9fd0 60%,var(--cyan-deep));color:#fff;border-radius:34px;padding:72px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;position:relative;overflow:hidden}
+  .cta .panel::after{content:"";position:absolute;right:-120px;bottom:-160px;width:460px;height:460px;border-radius:50%;border:60px solid rgba(255,255,255,.08)}
+  .cta h2{color:#fff}
+  .cta p{color:#e3f6fd}
+  .cta .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .cta .btn.white{background:#fff;color:var(--cyan-deep)}
+  .cta .info{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:30px;display:grid;gap:18px;backdrop-filter:blur(6px)}
+  .cta .info div{display:flex;gap:14px;align-items:flex-start}
+  .cta .info b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#cdeefb}
+  .cta .info svg{width:20px;height:20px;flex:none;margin-top:2px}
+
+  /* footer */
+  footer{background:var(--paper);border-top:1px solid var(--line);padding:64px 0 28px}
+  footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:48px}
+  footer h4{margin:0 0 14px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.95rem;color:var(--ink-2)}
+  footer .brand p{color:var(--ink-2);font-size:.95rem;max-width:340px;margin-top:16px}
+  footer .social{display:flex;gap:10px;margin-top:18px}
+  footer .social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-2)}
+  footer .bottom{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;font-size:.82rem;color:var(--ink-3)}
+
+  /* responsive */
+  @media (max-width:1080px){
+    nav{display:none}
+    .hero .wrap{grid-template-columns:1fr;min-height:0}
+    .hero-art{height:460px;margin-top:10px}
+    .hero-art .card{left:16px}
+    .trust .wrap{grid-template-columns:1fr 1fr}
+    .trust .item{border-left:0;padding-left:0}
+    .approach .wrap,.sports .wrap,.compare .grid,.steps .head,.life .wrap,.cta .panel{grid-template-columns:1fr}
+    .approach .art .stat{left:12px} .approach .art .tag{right:12px}
+    .cond-grid,.steps .grid,.quotes .grid{grid-template-columns:1fr 1fr}
+    .conditions .head{grid-template-columns:1fr}
+    .life .copy{padding:64px 32px}
+    .life .img{min-height:420px}
+    footer .grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    section{padding:72px 0}
+    .topbar .wrap span:first-child{display:none}
+    .nav-cta .phone{display:none}
+    .cond-grid,.steps .grid,.quotes .grid,footer .grid{grid-template-columns:1fr}
+    .cta .panel{padding:40px 28px}
+    .sports .art .badge{left:auto;right:-10px;top:-20px;width:120px;height:120px;font-size:.85rem}
+    footer .bottom{flex-direction:column;gap:8px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><span class="dot"></span>Open today 8am – 5pm &nbsp;·&nbsp; 6 Kesteven Avenue, Gate Pa, Tauranga</span>
+    <span>Call us <b>07 925 0269</b></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="assets/logo.png" alt="Corrective Foot Solutions"></a>
+    <nav>
+      <ul>
+        <li><a href="#">Our approach</a></li>
+        <li><a href="#">What we treat</a></li>
+        <li><a href="#">Sports podiatry</a></li>
+        <li><a href="#">Fees</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="phone" href="tel:+6479250269">07 925 0269</a>
+      <a class="btn primary" href="#">Book online</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Tauranga podiatrists · Foot Mobilisation Therapy</span>
+      <h1>Fix the cause of your foot pain. <span class="em">Not just the symptoms.</span></h1>
+      <p class="lead">Heel pain, bunions, hammer toes, sore knees, or shoes you can’t wear anymore? Our gentle, hands‑on therapy corrects the joints causing the problem, so you can walk and run in comfort again. No orthotics. No surgery.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="#">Book an appointment
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#">How it works</a>
+      </div>
+      <div class="hero-note">
+        <div class="avatars"><span></span><span></span><span></span></div>
+        <div><span class="stars">★★★★★</span> &nbsp;Rated 4.9 from 120+ Google reviews</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div><div class="ring"></div>
+      <div class="main"><img src="assets/img/hero.jpg" alt="Walking barefoot along the beach at sunrise"></div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><path d="M9 10l2 2 4-4"/></svg></div>
+        <div><b>Results that last</b><small>FMT changes the structure of your foot, so you keep improving after treatment ends.</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="item"><div class="ic c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></div><div><b>No orthotics</b><small>Treat the cause, not the symptom</small></div></div>
+    <div class="item"><div class="ic p"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="4" y="11" width="16" height="10" rx="2"/></svg></div><div><b>No surgery</b><small>Gentle, painless and low‑risk</small></div></div>
+    <div class="item"><div class="ic o"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="5"/></svg></div><div><b>Measurable progress</b><small>Objective feedback every visit</small></div></div>
+    <div class="item"><div class="ic c"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4.5 4.5 0 0 1 7 0"/></svg></div><div><b>Whole family</b><small>From kids to grandparents</small></div></div>
+  </div>
+</section>
+
+<section class="approach">
+  <div class="wrap">
+    <div class="art">
+      <img src="assets/img/hands.jpg" alt="Podiatrist performing hands-on foot mobilisation">
+      <div class="tag">Hands‑on, not hands‑off</div>
+      <div class="stat"><div class="big">8+ yrs</div><small>of FMT in Tauranga</small></div>
+    </div>
+    <div class="copy">
+      <span class="eyebrow">Our approach</span>
+      <h2>A different kind of podiatry, <span class="em">built around your feet</span></h2>
+      <p class="lead">Foot Mobilisation Therapy (FMT) is a hands‑on technique that gently restores movement to stiff, misaligned or dysfunctional joints, encouraging the foot back through its natural range of motion.</p>
+      <ul class="checks">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Stimulates natural repair.</b> Your body does the healing; we give it the alignment to do it.</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Keeps working after you leave.</b> Orthotics only work while you wear them. FMT changes the structure of your foot.</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Keep your life moving.</b> You’re encouraged to continue normal activity throughout treatment.</span></li>
+      </ul>
+      <div><a class="btn ghost" href="#">Learn how FMT works</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow plum">Why FMT</span>
+      <h2>Orthotics manage the problem. <span class="em">We correct it.</span></h2>
+      <p class="lead">A quick look at how our approach differs from traditional podiatry.</p>
+    </div>
+    <div class="grid">
+      <div class="cmp">
+        <h3>Traditional orthotics</h3>
+        <div class="sub">Insoles that support the foot in its current shape</div>
+        <ul>
+          <li><span class="x">✕</span>Only works while you wear them</li>
+          <li><span class="x">✕</span>Limits the shoes you can wear</li>
+          <li><span class="x">✕</span>Treats the symptom, not the joint restriction</li>
+          <li><span class="x">✕</span>Often needs replacing and refitting</li>
+          <li><span class="x">✕</span>Surgery is the usual “next step”</li>
+        </ul>
+      </div>
+      <div class="cmp fmt">
+        <h3>Foot Mobilisation Therapy</h3>
+        <div class="sub">Hands‑on correction of the joints causing the pain</div>
+        <ul>
+          <li><span class="y">✓</span>Improvement continues between and after visits</li>
+          <li><span class="y">✓</span>Wear the footwear that suits you</li>
+          <li><span class="y">✓</span>Addresses the underlying cause</li>
+          <li><span class="y">✓</span>Gentle, painless and minimal risk</li>
+          <li><span class="y">✓</span>A real alternative to foot surgery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="conditions">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">What we treat</span>
+        <h2>Common foot problems we see <span class="em">every day</span></h2>
+        <p class="lead">Foot problems ripple through the whole body. If any of these sound familiar, we can help.</p>
+      </div>
+      <a class="btn ghost" href="#">See all conditions</a>
+    </div>
+    <div class="cond-grid">
+      <div class="cond"><div class="ic c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 21c-2 0-3-2-3-4 0-5 3-7 3-12a3 3 0 0 1 6 0c0 2 2 3 4 3s3 2 3 4-2 3-4 3c-1 2-1 6-9 6z"/></svg></div><h3>Bunions</h3><p>Realign the big toe joint and ease the bump without going under the knife.</p><a class="more" href="#">Learn more →</a></div>
+      <div class="cond"><div class="ic p"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 18h16M6 18c0-6 2-12 6-12s6 6 6 12"/><path d="M9 18v-4"/></svg></div><h3>Heel pain</h3><p>Plantar fasciitis and heel spurs, treated at the joint restrictions that cause them.</p><a class="more" href="#">Learn more →</a></div>
+      <div class="cond"><div class="ic o"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 16c4 0 5-6 9-6s5 6 9 6"/><path d="M3 20h18"/></svg></div><h3>Dorsal foot pain</h3><p>Pain across the top of the foot, often from stiff midfoot joints.</p><a class="more" href="#">Learn more →</a></div>
+      <div class="cond"><div class="ic o"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="7"/><path d="M12 6V3M9 4l3-1 3 1"/></svg></div><h3>Ball of foot pain</h3><p>Metatarsalgia, neuromas and that “walking on a pebble” feeling.</p><a class="more" href="#">Learn more →</a></div>
+      <div class="cond"><div class="ic c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 18c3 0 4-8 8-8s3 4 8 4"/><path d="M4 21h16"/></svg></div><h3>Hammer toes</h3><p>Gently restore movement to clawed or curled toes before they set.</p><a class="more" href="#">Learn more →</a></div>
+      <div class="cond"><div class="ic p"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><h3>Ankle &amp; knee pain</h3><p>When the foot isn’t working, the ankle and knee pay for it. We fix the foundation.</p><a class="more" href="#">Learn more →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2 style="margin-top:14px">Three steps to walking <span class="em" style="color:var(--cyan)">comfortably again</span></h2>
+      </div>
+      <p class="lead">Every plan starts with a thorough assessment, so you know exactly what’s going on and what to expect, before any treatment begins.</p>
+    </div>
+    <div class="grid">
+      <div class="step"><div class="n">01</div><h3>Assess</h3><p>A detailed hands‑on assessment of every joint in your foot and ankle, plus how you stand, walk and move. You’ll see objective measurements, not guesswork.</p></div>
+      <div class="step"><div class="n">02</div><h3>Mobilise</h3><p>Gentle, targeted mobilisation of the restricted joints. Most people describe it as a firm, comfortable stretch. No needles, no cutting, no bulky insoles.</p></div>
+      <div class="step"><div class="n">03</div><h3>Strengthen</h3><p>Simple exercises from your client portal keep the correction and build strength, so your feet hold their new alignment for the long term.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="life">
+  <div class="wrap">
+    <div class="img"><img src="assets/img/family.jpg" alt="A family walking along a Wellington beach"></div>
+    <div class="copy">
+      <span class="eyebrow olive">Podiatry for the whole family</span>
+      <h2>Keep up with the kids. Walk the extra kilometre. <span class="em" style="color:#6f7a1d">Wear the shoes you love.</span></h2>
+      <p class="lead">We believe quality of life means being able to move freely. Whether it’s a toddler’s in‑toeing, a teenager’s growing pains, a runner’s niggle or a grandparent’s bunion, the approach is the same: gentle, measurable and built to last.</p>
+      <div class="pills"><span class="pill">Children &amp; teens</span><span class="pill">Runners &amp; athletes</span><span class="pill">Tradies on their feet all day</span><span class="pill">Active over‑60s</span></div>
+      <div><a class="btn primary" href="#">Book a first appointment</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow plum">Client stories</span>
+      <h2>Back on their feet, <span class="em">in their own words</span></h2>
+      <span class="google"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9z"/><path fill="#EA4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.7 9.4 5.9 12 5.9z"/></svg> 4.9 on Google · 120+ reviews</span>
+    </div>
+    <div class="grid">
+      <div class="quote"><div class="mark">“</div><p>I’d been told surgery was my only option for my bunion. After a few months of FMT I’m hiking again and back in my normal shoes.</p><div class="who"><span class="av">JM</span><div>Jenny M.<small>Bunion · Mount Maunganui</small></div></div></div>
+      <div class="quote"><div class="mark">“</div><p>Years of heel pain gone. I’d tried three sets of orthotics. This was the first thing that actually fixed the problem rather than padding it.</p><div class="who"><span class="av" style="background:var(--cyan-deep)">DR</span><div>Dave R.<small>Heel pain · Pāpāmoa</small></div></div></div>
+      <div class="quote"><div class="mark">“</div><p>Gentle enough for my 9‑year‑old, who now runs without complaining about his feet. Shaun explains everything so clearly.</p><div class="who"><span class="av" style="background:var(--olive)">AK</span><div>Aroha K.<small>Children’s podiatry · Tauranga</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sports">
+  <div class="wrap">
+    <div class="copy">
+      <span class="eyebrow olive">Sports podiatry</span>
+      <h2>Run further. <span class="em" style="color:#6f7a1d">Recover faster.</span></h2>
+      <p class="lead">Restricted foot joints change the way you load every stride. We work with runners, trail athletes, netballers and weekend warriors across the Bay of Plenty to restore efficient movement, treat niggles before they become injuries, and keep training on track.</p>
+      <ul class="checks">
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Gait and loading assessment</b> with objective measurements</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Keep training</b> through treatment in most cases</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Footwear advice</b> that doesn’t depend on orthotics</span></li>
+      </ul>
+      <div><a class="btn ghost" href="#">Explore sports podiatry</a></div>
+    </div>
+    <div class="art">
+      <img src="assets/img/runner.jpg" alt="Trail runner on a forest path">
+      <div class="badge">Built for the Bay’s trails</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="panel">
+      <div>
+        <h2>Don’t put up with it another season.</h2>
+        <p class="lead" style="margin-top:16px">Book online in under a minute, or send us an enquiry and we’ll call you back to talk through your options.</p>
+        <div class="ctas">
+          <a class="btn white" href="#">Book online</a>
+          <a class="btn light" href="#">Send an enquiry</a>
+        </div>
+      </div>
+      <div class="info">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Clinic</b>6 Kesteven Avenue, Gate Pa, Tauranga 3112</div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><div><b>Phone</b>07 925 0269</div></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Hours</b>Mon – Fri, 8am – 5pm</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Corrective Foot Solutions" style="height:60px">
+        <p>Tauranga podiatrists treating the cause of foot and leg pain with gentle, hands‑on Foot Mobilisation Therapy. No orthotics, no surgery.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8.5c0-.3.2-.5.5-.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 9H3v12h3zM4.5 7.5A1.8 1.8 0 1 0 4.5 4a1.8 1.8 0 0 0 0 3.5zM21 21h-3v-6c0-1.6-.6-2.5-1.9-2.5S14 13.5 14 15v6h-3V9h3v1.5c.6-1 1.8-1.8 3.4-1.8 2.5 0 3.6 1.6 3.6 4.5z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul><li>Our approach</li><li>What we treat</li><li>Sports podiatry</li><li>Fees</li><li>FAQ</li><li>Blog</li></ul></div>
+      <div><h4>Clinic</h4><ul><li>About us</li><li>Tauranga clinic</li><li>Contact</li><li>Client login</li><li>Book online</li></ul></div>
+      <div><h4>Visit</h4><ul><li>6 Kesteven Avenue<br>Gate Pa, Tauranga 3112</li><li>07 925 0269</li><li>Mon – Fri, 8am – 5pm</li><li><a href="#" style="color:var(--cyan-deep);font-weight:600">Get directions →</a></li></ul></div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Corrective Foot Solutions Ltd. All rights reserved.</span>
+      <span>Web design by What the Heck</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
