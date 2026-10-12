@@ -14,7 +14,7 @@
     --olive:#9aa33b; --olive-tint:#f0f3dc;
     --ink:#17202b; --ink-2:#44505c; --ink-3:#7a8690;
     --sand:#f7f2ea; --sand-2:#efe6d8; --paper:#fffdf9; --line:#e6ded1;
-    --radius:22px;
+    --radius:0px;
     --max:1200px;
   }
   *{box-sizing:border-box}
@@ -34,7 +34,7 @@
   .eyebrow.olive{color:#6f7a1d} .eyebrow.olive::before{background:var(--olive)}
   .lead{font-size:1.15rem;color:var(--ink-2)}
   .em{font-style:italic;font-weight:400;color:var(--cyan-deep)}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:600;font-size:.95rem;border:1.5px solid transparent;transition:.2s;white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:2px;font-weight:600;font-size:.95rem;border:1.5px solid transparent;transition:.2s;white-space:nowrap}
   .btn.primary{background:var(--cyan);color:#fff;box-shadow:0 10px 24px -10px rgba(18,180,229,.7)}
   .btn.primary:hover{background:var(--cyan-deep)}
   .btn.ghost{border-color:var(--ink);color:var(--ink);background:transparent}
@@ -76,21 +76,21 @@
   .hero-note .avatars span:nth-child(3){background:linear-gradient(135deg,var(--plum),var(--olive))}
   .stars{color:#f0b429;letter-spacing:1px}
   .hero-art{position:relative;height:600px}
-  .hero-art .main{position:absolute;inset:0;border-radius:36px 36px 36px 120px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(23,32,43,.45)}
+  .hero-art .main{position:absolute;inset:0;border-radius:0;overflow:hidden;box-shadow:0 40px 80px -40px rgba(23,32,43,.45)}
   .hero-art .main img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
-  .hero-art .card{position:absolute;left:-52px;bottom:54px;background:#fff;border-radius:20px;padding:18px 22px;display:flex;gap:16px;align-items:center;box-shadow:0 24px 50px -24px rgba(23,32,43,.4);max-width:330px}
-  .hero-art .card .ic{width:48px;height:48px;border-radius:14px;background:var(--cyan-tint);display:grid;place-items:center;color:var(--cyan-deep);flex:none}
+  .hero-art .card{position:absolute;left:-52px;bottom:54px;background:#fff;border-radius:0;border-left:4px solid var(--cyan);padding:18px 22px;display:flex;gap:16px;align-items:center;box-shadow:0 24px 50px -24px rgba(23,32,43,.4);max-width:330px}
+  .hero-art .card .ic{width:48px;height:48px;border-radius:0;background:var(--cyan-tint);display:grid;place-items:center;color:var(--cyan-deep);flex:none}
   .hero-art .card b{display:block;font-size:.95rem}
   .hero-art .card small{color:var(--ink-3);font-size:.82rem;line-height:1.4;display:block}
-  .hero-art .blob{position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:var(--olive-tint);z-index:-1}
-  .hero-art .ring{position:absolute;right:-30px;bottom:-30px;width:180px;height:180px;border-radius:50%;border:16px solid var(--plum-tint);z-index:-1}
+  .hero-art .blob{position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:0;background:var(--olive-tint);z-index:-1}
+  .hero-art .ring{position:absolute;right:-30px;bottom:-30px;width:180px;height:180px;border-radius:0;border:16px solid var(--plum-tint);z-index:-1}
 
   /* trust strip */
   .trust{background:var(--paper);border-bottom:1px solid var(--line);padding:0}
   .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
   .trust .item{padding:30px 24px;display:flex;gap:16px;align-items:center;border-left:1px solid var(--line)}
   .trust .item:first-child{border-left:0;padding-left:0}
-  .trust .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex:none}
+  .trust .ic{width:44px;height:44px;border-radius:0;display:grid;place-items:center;flex:none}
   .trust b{display:block;font-size:.98rem}
   .trust small{color:var(--ink-3);font-size:.82rem}
   .ic.c{background:var(--cyan-tint);color:var(--cyan-deep)}
@@ -101,15 +101,15 @@
   .approach .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
   .approach .art{position:relative}
   .approach .art img{border-radius:var(--radius);aspect-ratio:4/4.4;object-fit:cover;width:100%}
-  .approach .art .tag{position:absolute;right:-24px;top:40px;background:var(--plum);color:#fff;padding:14px 18px;border-radius:16px;font-family:"Fraunces",serif;font-style:italic;font-size:1.05rem;box-shadow:0 18px 40px -20px rgba(138,31,90,.6);transform:rotate(3deg)}
-  .approach .art .stat{position:absolute;left:-28px;bottom:36px;background:#fff;border-radius:18px;padding:18px 22px;box-shadow:0 24px 50px -24px rgba(23,32,43,.35)}
+  .approach .art .tag{position:absolute;right:-24px;top:40px;background:var(--plum);color:#fff;padding:14px 18px;border-radius:0;font-family:"Fraunces",serif;font-style:italic;font-size:1.05rem;box-shadow:0 18px 40px -20px rgba(138,31,90,.6);transform:rotate(3deg)}
+  .approach .art .stat{position:absolute;left:-28px;bottom:36px;background:#fff;border-radius:0;border-left:4px solid var(--cyan);padding:18px 22px;box-shadow:0 24px 50px -24px rgba(23,32,43,.35)}
   .approach .art .stat .big{font-family:"Fraunces",serif;font-size:2.4rem;line-height:1;color:var(--cyan-deep)}
   .approach .art .stat small{color:var(--ink-3)}
   .approach .copy{display:flex;flex-direction:column;gap:22px}
   .checks{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:14px}
   .checks li{display:flex;gap:14px;align-items:flex-start;color:var(--ink-2)}
   .checks li b{color:var(--ink)}
-  .checks .tick{width:26px;height:26px;border-radius:50%;background:var(--cyan-tint);color:var(--cyan-deep);display:grid;place-items:center;flex:none;margin-top:2px}
+  .checks .tick{width:26px;height:26px;border-radius:0;background:var(--cyan-tint);color:var(--cyan-deep);display:grid;place-items:center;flex:none;margin-top:2px}
   .checks .tick svg{width:14px;height:14px}
 
   /* compare */
@@ -118,7 +118,7 @@
   .compare .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   .cmp{border-radius:var(--radius);padding:36px;background:#fff;border:1px solid var(--line)}
   .cmp.fmt{background:var(--ink);color:#fff;border-color:var(--ink);position:relative;overflow:hidden}
-  .cmp.fmt::after{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(18,180,229,.45),transparent 70%)}
+  .cmp.fmt::after{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;border-radius:0;transform:rotate(20deg);background:radial-gradient(circle,rgba(18,180,229,.45),transparent 70%)}
   .cmp h3{font-size:1.5rem;margin-bottom:6px}
   .cmp .sub{font-size:.9rem;color:var(--ink-3);margin-bottom:22px}
   .cmp.fmt .sub{color:#9fb0bf}
@@ -131,16 +131,23 @@
   /* conditions */
   .conditions .head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;margin-bottom:48px}
   .conditions .head div{display:flex;flex-direction:column;gap:14px;max-width:620px}
-  .cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .cond{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;transition:.25s;position:relative;display:flex;flex-direction:column;gap:12px}
-  .cond:hover{transform:translateY(-4px);box-shadow:0 30px 50px -30px rgba(23,32,43,.3);border-color:transparent}
-  .cond .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:6px}
+  .cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
+  .cond{position:relative;background:var(--sand);display:flex;flex-direction:column;overflow:hidden}
+  .cond .img{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sand-2)}
+  .cond .img img{width:100%;height:100%;object-fit:cover;object-position:center;mix-blend-mode:multiply;transform:scale(1.04);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .cond:hover .img img{transform:scale(1.1)}
+  .cond .img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(23,32,43,.08),transparent 40%)}
+  .cond .body{padding:26px 28px 30px;display:flex;flex-direction:column;gap:10px;flex:1;background:#fff}
+  .cond h3{display:flex;align-items:center;gap:12px}
+  .cond h3::before{content:"";width:10px;height:10px;background:var(--cyan);flex:none}
+  .cond:nth-child(2) h3::before,.cond:nth-child(6) h3::before{background:var(--plum)}
+  .cond:nth-child(3) h3::before,.cond:nth-child(4) h3::before{background:var(--olive)}
   .cond p{color:var(--ink-2);font-size:.95rem}
-  .cond a.more{font-weight:600;color:var(--cyan-deep);font-size:.9rem;margin-top:auto;display:inline-flex;gap:6px;align-items:center}
+  .cond a.more{font-weight:600;color:var(--cyan-deep);font-size:.9rem;margin-top:auto;padding-top:8px;display:inline-flex;gap:6px;align-items:center}
 
   /* steps */
   .steps{background:var(--ink);color:#fff;padding:104px 0;position:relative;overflow:hidden}
-  .steps::before{content:"";position:absolute;left:-200px;bottom:-300px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(154,163,59,.35),transparent 70%)}
+  .steps::before{content:"";position:absolute;left:-200px;bottom:-300px;width:600px;height:600px;border-radius:0;background:radial-gradient(circle,rgba(154,163,59,.35),transparent 70%)}
   .steps .head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
   .steps .head p{color:#b5c1cc}
   .steps .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
@@ -159,7 +166,7 @@
   .life .copy h2{max-width:520px}
   .life .copy .lead{max-width:520px}
   .pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-  .pill{padding:9px 16px;border-radius:999px;background:#fff;font-size:.88rem;font-weight:600;color:var(--ink-2);border:1px solid rgba(0,0,0,.05)}
+  .pill{padding:9px 16px;border-radius:0;background:#fff;font-size:.88rem;font-weight:600;color:var(--ink-2);border:1px solid rgba(0,0,0,.05)}
 
   /* testimonials */
   .quotes .head{text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;margin-bottom:52px}
@@ -170,7 +177,7 @@
   .quote .who{display:flex;align-items:center;gap:12px;margin-top:auto;font-size:.9rem}
   .quote .who span.av{width:40px;height:40px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
   .quote .who small{display:block;color:var(--ink-3)}
-  .google{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:.9rem;font-weight:600}
+  .google{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:0;background:#fff;border:1px solid var(--line);font-size:.9rem;font-weight:600}
 
   /* sports */
   .sports{background:var(--sand);padding:0;overflow:hidden}
@@ -178,18 +185,18 @@
   .sports .copy{display:flex;flex-direction:column;gap:22px}
   .sports .art{position:relative}
   .sports .art img{border-radius:var(--radius);aspect-ratio:5/4;object-fit:cover;width:100%}
-  .sports .art .badge{position:absolute;left:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:var(--olive);color:#fff;display:grid;place-items:center;text-align:center;font-family:"Fraunces",serif;font-style:italic;font-size:1rem;line-height:1.2;padding:18px;transform:rotate(-8deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+  .sports .art .badge{position:absolute;left:-30px;top:-30px;width:150px;height:150px;border-radius:0;background:var(--olive);color:#fff;display:grid;place-items:center;text-align:center;font-family:"Fraunces",serif;font-style:italic;font-size:1rem;line-height:1.2;padding:18px;transform:rotate(-8deg);box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
 
   /* cta band */
   .cta{padding:0}
   .cta .wrap{padding-top:104px;padding-bottom:104px}
-  .cta .panel{background:linear-gradient(120deg,var(--cyan) 0%,#0e9fd0 60%,var(--cyan-deep));color:#fff;border-radius:34px;padding:72px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;position:relative;overflow:hidden}
-  .cta .panel::after{content:"";position:absolute;right:-120px;bottom:-160px;width:460px;height:460px;border-radius:50%;border:60px solid rgba(255,255,255,.08)}
+  .cta .panel{background:linear-gradient(120deg,var(--cyan) 0%,#0e9fd0 60%,var(--cyan-deep));color:#fff;border-radius:0;padding:72px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;position:relative;overflow:hidden}
+  .cta .panel::after{content:"";position:absolute;right:-120px;bottom:-160px;width:460px;height:460px;border-radius:0;transform:rotate(12deg);border:60px solid rgba(255,255,255,.08)}
   .cta h2{color:#fff}
   .cta p{color:#e3f6fd}
   .cta .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
   .cta .btn.white{background:#fff;color:var(--cyan-deep)}
-  .cta .info{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:30px;display:grid;gap:18px;backdrop-filter:blur(6px)}
+  .cta .info{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:0;padding:30px;display:grid;gap:18px;backdrop-filter:blur(6px)}
   .cta .info div{display:flex;gap:14px;align-items:flex-start}
   .cta .info b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#cdeefb}
   .cta .info svg{width:20px;height:20px;flex:none;margin-top:2px}
@@ -201,7 +208,7 @@
   footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.95rem;color:var(--ink-2)}
   footer .brand p{color:var(--ink-2);font-size:.95rem;max-width:340px;margin-top:16px}
   footer .social{display:flex;gap:10px;margin-top:18px}
-  footer .social a{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-2)}
+  footer .social a{width:38px;height:38px;border-radius:0;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-2)}
   footer .bottom{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;font-size:.82rem;color:var(--ink-3)}
 
   /* responsive */
@@ -363,12 +370,12 @@
       <a class="btn ghost" href="#">See all conditions</a>
     </div>
     <div class="cond-grid">
-      <div class="cond"><div class="ic c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 21c-2 0-3-2-3-4 0-5 3-7 3-12a3 3 0 0 1 6 0c0 2 2 3 4 3s3 2 3 4-2 3-4 3c-1 2-1 6-9 6z"/></svg></div><h3>Bunions</h3><p>Realign the big toe joint and ease the bump without going under the knife.</p><a class="more" href="#">Learn more →</a></div>
-      <div class="cond"><div class="ic p"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 18h16M6 18c0-6 2-12 6-12s6 6 6 12"/><path d="M9 18v-4"/></svg></div><h3>Heel pain</h3><p>Plantar fasciitis and heel spurs, treated at the joint restrictions that cause them.</p><a class="more" href="#">Learn more →</a></div>
-      <div class="cond"><div class="ic o"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 16c4 0 5-6 9-6s5 6 9 6"/><path d="M3 20h18"/></svg></div><h3>Dorsal foot pain</h3><p>Pain across the top of the foot, often from stiff midfoot joints.</p><a class="more" href="#">Learn more →</a></div>
-      <div class="cond"><div class="ic o"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="13" r="7"/><path d="M12 6V3M9 4l3-1 3 1"/></svg></div><h3>Ball of foot pain</h3><p>Metatarsalgia, neuromas and that “walking on a pebble” feeling.</p><a class="more" href="#">Learn more →</a></div>
-      <div class="cond"><div class="ic c"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 18c3 0 4-8 8-8s3 4 8 4"/><path d="M4 21h16"/></svg></div><h3>Hammer toes</h3><p>Gently restore movement to clawed or curled toes before they set.</p><a class="more" href="#">Learn more →</a></div>
-      <div class="cond"><div class="ic p"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><h3>Ankle &amp; knee pain</h3><p>When the foot isn’t working, the ankle and knee pay for it. We fix the foundation.</p><a class="more" href="#">Learn more →</a></div>
+      <div class="cond"><div class="img"><img src="assets/img/cond-bunions.png" alt="Bunions"></div><div class="body"><h3>Bunions</h3><p>Realign the big toe joint and ease the bump without going under the knife.</p><a class="more" href="#">Learn more →</a></div></div>
+      <div class="cond"><div class="img"><img src="assets/img/cond-heel.png" alt="Heel pain"></div><div class="body"><h3>Heel pain</h3><p>Plantar fasciitis and heel spurs, treated at the joint restrictions that cause them.</p><a class="more" href="#">Learn more →</a></div></div>
+      <div class="cond"><div class="img"><img src="assets/img/cond-dorsal.png" alt="Dorsal foot pain"></div><div class="body"><h3>Dorsal foot pain</h3><p>Pain across the top of the foot, often from stiff midfoot joints.</p><a class="more" href="#">Learn more →</a></div></div>
+      <div class="cond"><div class="img"><img src="assets/img/cond-ball.png" alt="Ball of foot pain"></div><div class="body"><h3>Ball of foot pain</h3><p>Metatarsalgia, neuromas and that “walking on a pebble” feeling.</p><a class="more" href="#">Learn more →</a></div></div>
+      <div class="cond"><div class="img"><img src="assets/img/cond-hammer.png" alt="Hammer toes"></div><div class="body"><h3>Hammer toes</h3><p>Gently restore movement to clawed or curled toes before they set.</p><a class="more" href="#">Learn more →</a></div></div>
+      <div class="cond"><div class="img"><img src="assets/img/cond-ankle.png" alt="Ankle &amp; knee pain"></div><div class="body"><h3>Ankle &amp; knee pain</h3><p>When the foot isn’t working, the ankle and knee pay for it. We fix the foundation.</p><a class="more" href="#">Learn more →</a></div></div>
     </div>
   </div>
 </section>
